@@ -1,0 +1,456 @@
+/*全体に関するコード*/
+body{
+    font-family: /*'Hiragino Kaku Gothic Std'*/'Hiragino Maru Gothic ProN';
+    position: relative;
+    background-color: #e0ffff;  /*#ffffe7*/
+    background-size: 100% 1.5em;
+    line-height:2em;
+}
+ /*index.htmlのコード*/ 
+ .mompicture{
+    width:80px;
+    height:150px;
+}
+
+.childpicture{
+    width: 120px;
+    height: 70px;
+} 
+
+.dadpicture{
+    width:80px;
+    height: 150px;
+}
+
+.design{
+    border: 5px dotted #f5deb3;
+    height: 555px;
+}
+ 
+input{
+    width: 280px;
+    height: 30px;
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.user{
+    margin-bottom: 5px;
+}
+
+.button{
+    float:left;
+    width:98px;
+    height: 30px;
+    line-height: 25px;
+    font-size:20px;
+    margin-bottom: 5px;
+   /* margin-top: -50px; 
+   /*border-top: 2px solid #CCC;４色に関しては保留  */ 
+}
+
+.recording.button{
+    background-color: #ffb6c1;
+}
+
+.help.button{
+    background-color:#f0e68c;
+}
+
+.newaccount.button{
+    background-color: #9acd32;
+}
+
+.loginkeep{
+    height: 30px;
+    width: 80px;
+    margin: 15px;
+    font-size: 15px;
+}
+
+.forgetpassword{
+    font-size: 15px;
+    float:left;
+}
+/*index2.htmlのコード*/
+
+/*時間表に関して*/
+.calendershift{
+    font-size: 15px;
+}
+
+.movebutton1{
+    width: 0;
+    height: 0;
+    border-top: solid 6px  transparent;
+    border-right: solid 12px #191970;
+    border-bottom: solid 6px  transparent;
+    border-left: solid 6px  transparent; 
+}
+.movebutton2{
+    width: 0;
+    height: 0;
+    border-top: solid 6px transparent;
+    border-right: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    border-left: solid 12px #191970;
+}
+
+.movebutton1:hover{
+    cursor:pointer;
+}
+.movebutton2:hover{
+    cursor:pointer;
+}
+
+.buttoncolor{
+    background-color:#e0ffff;
+    border: 3px solid #e0ffff;
+}
+
+.timeboard{
+    border: 3px dotted #f5deb3;
+    display: table;
+    width: 300px;
+    height: 500px
+}
+
+.box{
+    display: table-cell; 
+    font-size: 20px;
+    font-family: fantasy;
+    margin: 0 auto;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.box.time{
+    border-right: 3px dotted #f5deb3;
+    margin-bottom: -100px;
+    width:80px;
+}
+
+.borderline{
+    border-top :3px dotted #f5deb3;
+    margin-top: -10px;
+}
+
+.box.contents{
+    border-right: 3px dotted #f5deb3;
+    width:100px;
+}
+/*備考欄に関して*/
+#text_area {
+  border-radius: 5px;
+  border-color: #FFF;
+  font-size: 16px;
+  margin-top: -20px; 
+  line-height: 20px;
+  resize: none;
+}
+
+#text_length {
+  color: #999;
+  font-size: 13px;
+  float: right;
+  margin-right: 5px;
+}
+
+#text_length.out {
+  color: #C00;
+}
+
+.textcontents{
+    height:40px;
+    width:130px;
+    font-size: 15px;
+    background-color: #ffa500;
+    border: solid 3px #cd853f;
+}
+
+.textcontents:hover{
+    cursor: pointer;
+}
+
+/*タブに関して*/
+.tab {
+  margin: 0 auto;
+  padding: 10px;
+  width: 300px;
+}
+
+.tab_head {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  font-size: 15px;
+}
+
+.tab_head > li {
+  background-color: #EEE;
+  border: 1px solid #CCC;
+  border-bottom: 0;
+  cursor: pointer;
+  float: left;
+  margin-right: -1px;
+  text-align: center;
+  width: 40px;
+  height: 30px;
+  margin-bottom: -10px;
+  line-height: 25px;
+}
+
+.tab_head > li.on {
+  background-color: #FFF;
+  cursor: default;
+}
+
+#tab_body {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#tab_body > li {
+  display: none;
+}
+
+#tab_body > li.tab_head.cooking {
+  display: block;
+}
+
+.tab_head.cooking{
+    background-color:#ff443e;
+}
+.tab_head.laundry{
+    background-color:#84e7ff;
+}
+.tab_head.keeping{
+    background-color: #efee00;
+}
+.tab_head.childcare{
+    background-color: #ffb9ca;
+}
+.tab_head.shopping{
+    background-color: #9aff00;
+}
+.tab_head.nursingcare{
+    background-color: #cf9fee; 
+}
+
+/*画像に関して*/
+
+#spoon {
+    width: 60px;
+    height: 80px;
+    float: left;
+}
+
+/*ストップウォッチに関して*/
+
+div#stopwatchWrapper {
+    text-align: center;
+    border: 3px solid #CCC;
+    width: 300px;
+    height: 200px;
+}
+div#stopwatch {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px #000000 solid;
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-top:15px;
+}
+
+div#stopwatchControl{
+    float:right;
+    width:175px;
+    margin-top: 5px;
+}
+
+#stopwatchStartAndStop{
+    width:120px;
+    height:30px;
+    margin-bottom: 5px;
+    margin-left:10px;
+    font-size: 20px;
+}
+
+#stopwatchKeeping{
+    width:120px;
+    height:30px;
+    margin-bottom: 5px;
+    margin-left:10px;
+    font-size: 20px;
+}
+
+#stopwatchClear{
+    width:120px;
+    height:30px;
+    margin-bottom: 5px;
+    margin-left:10px;
+    font-size: 20px;
+}
+
+img{
+    width:80px;
+    height:100px;
+    
+}
+
+.pop_btn > li {
+  display: inline-block;
+  float: left;
+  height: 110px;
+  margin: 0;
+  position: relative;
+  width: 110px;
+}
+
+.pop_btn > li a {
+  background-color: #0B9;
+  border: 5px solid #0B9;
+  border-radius: 500px;
+  color: #FFF;
+  display: block;
+  font-size: 17px;
+  height: 70px;
+  left: 15px;
+  line-height: 70px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 15px;
+  transition: all ease 0.2s;
+  width: 70px;
+}
+
+.pop_btn > li a:hover {
+  background-color: #FFF;
+  color: #0B9;
+  height: 100px;
+  left: 0;
+  line-height: 100px;
+  top: 0;
+  width: 100px;
+}
+/*index3.thmlのコード*/
+calender.css
+table.calen { border-collapse:collapse; font-size:11pt; background-color:#fffafa; }
+table.calen th { border:1px solid #a57d6b; height:30px; }
+table.calen td { border:1px solid #a57d6b; text-align:center; height:30px; width:30px; }
+table.calen .sat { color:blue; }
+table.calen .sun { color:red; }
+table.calen .today { background-color:#ffe4ce; font-weight:bold; }
+table.calen tr.bg1 { background-color:#f5f5dc; }
+table.calen tr.bg2 { background-color:#eeeeee; }
+
+/*index6.htmlのコード*/
+.helpdesign{
+    border: 5px dotted #f5deb3;
+    background-color: white;
+}
+
+.helptext{
+    font-size:15px;
+    background-color: white;
+    width: 295px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+}
+
+.menu > li {
+  background-color:#ffd700;/*#00bfff*//*#1e90ff*/;
+  border-bottom: 1px solid #191970;
+  font-size: 13px;
+  line-height: 30px;
+  position: relative;
+}
+
+.menu > li:first-child {
+  border-top: 1px solid #191970    ;
+}
+
+.menu > li > label {
+  cursor: pointer;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.submenu {
+  display: none;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu > li > input:checked ~ .submenu {
+  display: block;
+}
+
+.submenu > li {
+  background-color: #e0ffff;
+  border-top: 1px solid #191970;
+  cursor: pointer;
+  color: black;
+}
+
+.submenu > li > p {
+  margin: 0;
+  padding-left: 15px;
+}
+/*index7.htmlのコード*/
+.usernames{
+ padding-bottom: 5px;
+ font-size: 15px;
+}
+
+.accountkeep{
+    height: 30px;
+    width: 80px;
+    font-size: 15px;
+    float: right;
+    margin-right: 15px;
+    }
+    
+.settingaccount{
+    margin-left: 10px;
+    margin-top: -40px;
+}
+/*index8.htmlのコード*/
+.resetexplain{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.e-mailaddress{
+    font-size: 15px;
+    line-height: 25px;
+    height: 30px;
+    width: 280px;
+}
+
+.sending{
+    height: 30px;
+    width: 80px;
+    margin-top: 30px;
+    margin-right: 15px;
+    font-size: 15px;
+    float:right;
+}
+

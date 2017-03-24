@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="components/loader.js"></script>
+    <script src="js/ncmb-2.1.3.min.js"></script>
+    <!-- グラフを書くためにcanvasを入れる -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+    
+    <script>
+        var stage = document.getElementById('stage');
+var chart = new CanvasJS.Chart(stage, {
+  title: {
+    text: "サンプルチャート"  //グラフタイトル
+  },
+  theme: "theme4",  //テーマ設定
+  data: [{
+    type: 'column',  //グラフの種類
+    dataPoints: data  //表示するデータ
+  }]
+});
+chart.render();
+
+    </script>
+    <script>
+        // APIキーの設定とSDK初期化
+var ncmb = new NCMB("e3edb9d9e24b2aff6fbdac5618f07ce9107e7e9e2bd230284c4d348f9b05634f",
+                    "a283f61b0d298829f04d0cb2df710a8ae1bb57c732e29f9bb37b7a1145181513");
+                    
+                    // 保存先クラスの作成
+var Houseworking = ncmb.DataStore("Houseworking");
+
+// 保存先クラスのインスタンスを生成
+var Houseworking = new Houseworking();
+
+// 値を設定と保存
+Houseworking.set("message", "Hello, NCMB!")
+         .save()
+         .then(function(object){
+             // 保存に成功した場合の処理
+            
+         })
+         .catch(function(err){
+             // 保存に失敗した場合の処理
+
+         });
+    </script>
+</head>
+<body>
+    <div class="design">
+        <h1 class="titlepage">Houseworking</h1>
+            <img src="apron_mama.png" alt="ママの写真" class="mompicture">
+            <img src="friends_kids.png" alt="こどもの写真" class="childpicture">
+            <img src="apron_papa.png" alt="パパの写真" class="dadpicture">
+        <div class="user">UserName<input/></div>
+        <div class="user">Password<input/></div>
+            <a class="user">ログイン情報を保存する</a><button class="loginkeep">保存</button>
+        <div>
+            <a href="index2.html"><p><button class="recording button">recording</button></a></p>
+            <a href="index6.html"><p><button class="help button">help</button></a></p>
+            <a href="index7.html"><p><button class="newaccount button">新規作成</button></a></p>                
+        </div>
+       <a href="index8.html" class="forgetpassword"><p>パスワードを忘れてしまった場合</p></a>
+    </div>
+</body>
+</html>
+
+<!-- パスワードを保存する機能を設ける-->
